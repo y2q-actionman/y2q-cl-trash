@@ -1,14 +1,16 @@
 (defpackage #:y2q-cl-trash/map-into-hash-table
   (:use :cl)
   (:import-from #:y2q-cl-trash/package
-		#:map-into-hash-table))	; The symbol to be defined.
+		#:map-into-hash-table))	; This symbol is defined.
 
 (in-package #:y2q-cl-trash/map-into-hash-table)
 
+(declaim (inline use-new))
 (defun use-new (_old-value new-value)
   (declare (ignore _old-value))
   new-value)
 
+(declaim (inline keep-old))
 (defun keep-old (old-value _new-value)
   (declare (ignore _new-value))
   old-value)
@@ -26,13 +28,12 @@
 (defun map-into-hash-table (list &key (key #'identity) (value #'identity)
 				   (hash-table (make-hash-table))
 				   (if-exists :overwrite))
-  (loop with merge-fn
-       = (case if-exists
-	   (:overwrite #'use-new)
-	   (:keep-old #'keep-old)
-	   (:push #'merge-push)
-	   (:error #'raise-error)
-	   (otherwise if-exists))
+  (loop with merge-fn = (case if-exists
+			  (:overwrite #'use-new)
+			  (:keep-old #'keep-old)
+			  (:push #'merge-push)
+			  (:error #'raise-error)
+			  (otherwise if-exists))
      for i in list
      as k = (funcall key i)
      as v = (funcall value i)
