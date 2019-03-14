@@ -1,11 +1,11 @@
-(defpackage #:y2q-cl-trash/src/map-into-hash-table
+(defpackage #:y2q-cl-trash/map-into-hash-table
   (:use :cl)
-  (:import-from #:y2q-cl-trash/package)	; for saying a dependency to `package-inferred-system'.
-  (:export))
+  (:import-from #:y2q-cl-trash/package
+		#:map-into-hash-table))	; The symbol to be defined.
 
-(in-package #:y2q-cl-trash/src/map-into-hash-table)
+(in-package #:y2q-cl-trash/map-into-hash-table)
 
-(defun y2q-cl-trash:map-into-hash-table
+(defun map-into-hash-table
     (list &key (key #'identity) (value #'identity) (hash-table (make-hash-table)))
   (loop for i in list
      as k = (funcall key i)

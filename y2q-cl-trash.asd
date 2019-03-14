@@ -5,4 +5,4 @@
   :class :package-inferred-system
   :defsystem-depends-on (:asdf-package-system)
   :depends-on (#:y2q-cl-trash/package
-	       #:y2q-cl-trash/src/map-into-hash-table))
+	       #:y2q-cl-trash/map-into-hash-table))
