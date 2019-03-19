@@ -28,11 +28,11 @@ IF-EXISTS controls what to do when there is a duplicated key:
                 and its return value is set into HASH-TABLE.
 
 Examples:
-(alexandria:hash-table-alist
- (reduce-into-hash-table '(1 2 3 4 5) :key #'1- :value #'princ-to-string))
-=> ((2 . \"3\") (3 . \"4\") (4 . \"5\") (1 . \"2\") (0 . \"1\")) ; ordering is unknown
+ (alexandria:hash-table-alist
+  (reduce-into-hash-table '(1 2 3 4 5) :key #'1- :value #'princ-to-string))
+  => ((2 . \"3\") (3 . \"4\") (4 . \"5\") (1 . \"2\") (0 . \"1\")) ; this ordering is unknown.
 
-(reduce-into-hash-table * :key #'car :value #'cdr) ; same as the `alist-hash-table'."
+ (reduce-into-hash-table * :key #'car :value #'cdr) ; same as the `alist-hash-table'."
   (ensure-functionf key value)
   (macrolet ((reducer-lambda ((k v &optional old-val (present-p (gensym)))
 			      &body body
