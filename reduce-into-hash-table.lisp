@@ -74,5 +74,7 @@ Examples:
 			     ;; I follow `reduce' convention; (funcall <accumulator> <new value>)
 			     (funcall merge-fn old-val v)
 			     v))))))))
+      (declare (dynamic-extent . #1=(rdc-overwrite rdc-keep-old rdc-push rdc-error reduce-fn))
+	       (type (function (t) t) . #1#))
       (map nil reduce-fn sequence)
       hash-table)))
