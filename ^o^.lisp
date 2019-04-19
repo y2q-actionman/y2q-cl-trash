@@ -1,17 +1,30 @@
-(in-package :cl-user)
+(defpackage #:y2q-cl-trash/^o^
+  (:use :cl :alexandria)
+  (:import-from #:y2q-cl-trash/package
+		#:^o^)) ; This symbol will be defined.
 
-(setf ^ 'lambda)
-(defun ^o^ () (lambda (^o^) ^o^))
-(defun ^ (o ^) (lambda (^o^) `(,(funcall o ^) ,^o^)))
+(in-package #:y2q-cl-trash/^o^)
 
+(defun ^o^ ()
+  "Makes a function behaves same as `cl:identity'
+  (This function is intended to show a smile '(^o^)' in your code.)"
+  (lambda (^o^) ^o^))
 
-(setf ^ '^)
-(defun ^o^ () (lambda (^o^) `(,^o^ (^o^) ,^o^)))
-(defun ^ (o ^) (lambda (^o^) `(,^o^ ,(funcall o ^) ,^o^)))
+;;; (funcall (^o^) "I do not export symbols below.")
 
+(defun ^ (o ^)
+  "Hmm.. what is this?
+  (This function is intended to show a smile '(^ o ^)' in the slime-autodoc.)"
+  (/ ^ o ^))
 
-((lambda (x) (list x (list (quote quote) x)))
- (quote (lambda (x) (list x (list (quote quote) x)))))
+(defparameter *quine*
+  ((lambda (^o^) `(,^o^ ,`',^o^))
+   '(lambda (^o^) `(,^o^ ,`',^o^)))
+  "The famous quine.")
 
-((lambda (^o^) `(,^o^ ,`',^o^))
- '(lambda (^o^) `(,^o^ ,`',^o^)))
+(defun Y (f)
+  "The famous Y combinator."
+  ((lambda (^o^) (funcall ^o^ ^o^))
+   (lambda (^o^)
+     (funcall f (lambda (&rest o)
+		  (apply (funcall ^o^ ^o^) o))))))
