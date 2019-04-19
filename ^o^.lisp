@@ -1,5 +1,5 @@
 (defpackage #:y2q-cl-trash/^o^
-  (:use :cl :alexandria)
+  (:use :cl)
   (:import-from #:y2q-cl-trash/package
 		#:^o^)) ; This symbol will be defined.
 

@@ -10,7 +10,8 @@
 		:depends-on ("package")
 		:serial nil
 		:components
-		((:file "defconstant-itself"))))
+		((:file "^o^")
+		 (:file "defconstant-itself"))))
   :perform (prepare-op :before (o c)
              (set (find-symbol* :*tests* '#:1am) '()))
   :perform (test-op (o s)
