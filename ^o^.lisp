@@ -1,7 +1,7 @@
 (defpackage #:y2q-cl-trash/^o^
   (:use :cl)
   (:import-from #:y2q-cl-trash/package
-		#:^o^)) ; This symbol will be defined.
+		#:^o^)) ; This will be defined.
 
 (in-package #:y2q-cl-trash/^o^)
 
