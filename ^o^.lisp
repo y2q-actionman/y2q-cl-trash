@@ -22,9 +22,9 @@
    '(lambda (^o^) `(,^o^ ,`',^o^)))
   "The famous quine.")
 
-(defun Y (f)
+(defun Y (w)
   "The famous Y combinator."
   ((lambda (^o^) (funcall ^o^ ^o^))
    (lambda (^o^)
-     (funcall f (lambda (&rest o)
-		  (apply (funcall ^o^ ^o^) o))))))
+     (funcall w (lambda (&rest orz)
+		  (apply (funcall ^o^ ^o^) orz))))))
