@@ -5,4 +5,5 @@
   (:export
    #:^o^
    #:defconstant-itself
-   #:reduce-into-hash-table))
+   #:reduce-into-hash-table
+   #:with-printing))
