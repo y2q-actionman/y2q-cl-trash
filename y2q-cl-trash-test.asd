@@ -11,7 +11,8 @@
 		:serial nil
 		:components
 		((:file "^o^")
-		 (:file "defconstant-itself"))))
+		 (:file "defconstant-itself")
+                 (:file "with-printing"))))
   :perform (prepare-op :before (o c)
              (set (find-symbol* :*tests* '#:1am) '()))
   :perform (test-op (o s)
