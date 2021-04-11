@@ -8,5 +8,6 @@
                #:y2q-cl-trash/^o^
                #:y2q-cl-trash/defconstant-itself
                #:y2q-cl-trash/reduce-into-hash-table
+               #:y2q-cl-trash/slots-boundp
                #:y2q-cl-trash/with-printing)
   :in-order-to ((test-op (test-op #:y2q-cl-trash-test))))

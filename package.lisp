@@ -6,4 +6,5 @@
    #:^o^
    #:defconstant-itself
    #:reduce-into-hash-table
+   #:slots-boundp
    #:with-printing))
