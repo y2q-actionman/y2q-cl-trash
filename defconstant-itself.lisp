@@ -1,7 +1,6 @@
 (defpackage #:y2q-cl-trash/defconstant-itself
   (:use :cl)
-  (:import-from #:y2q-cl-trash/package
-		#:defconstant-itself)) ; This will be defined.
+  (:export #:defconstant-itself))
 
 (in-package #:y2q-cl-trash/defconstant-itself)
 

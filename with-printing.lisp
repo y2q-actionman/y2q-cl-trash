@@ -1,7 +1,6 @@
 (defpackage #:y2q-cl-trash/with-printing
   (:use :cl)
-  (:import-from #:y2q-cl-trash/package
-		#:with-printing)) ; This will be defined.
+  (:export #:with-printing))
 
 (in-package #:y2q-cl-trash/with-printing)
 

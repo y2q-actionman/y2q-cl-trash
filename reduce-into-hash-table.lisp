@@ -1,7 +1,6 @@
 (defpackage #:y2q-cl-trash/reduce-into-hash-table
   (:use :cl :alexandria)
-  (:import-from #:y2q-cl-trash/package
-		#:reduce-into-hash-table)) ; This will be defined.
+  (:export #:reduce-into-hash-table))
 
 (in-package #:y2q-cl-trash/reduce-into-hash-table)
 

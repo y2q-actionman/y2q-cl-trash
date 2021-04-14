@@ -1,7 +1,6 @@
 (defpackage #:y2q-cl-trash/^o^
   (:use :cl)
-  (:import-from #:y2q-cl-trash/package
-		#:^o^)) ; This will be defined.
+  (:export #:^o^))
 
 (in-package #:y2q-cl-trash/^o^)
 
