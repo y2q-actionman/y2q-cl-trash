@@ -6,6 +6,7 @@
    #:y2q-cl-trash/^o^
    #:y2q-cl-trash/cljsp-unused
    #:y2q-cl-trash/defconstant-itself
+   #:y2q-cl-trash/equal-expansion-p
    #:y2q-cl-trash/reduce-into-hash-table
    #:y2q-cl-trash/slots-boundp
    #:y2q-cl-trash/with-printing))
