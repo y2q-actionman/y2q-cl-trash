@@ -1,9 +1,20 @@
-(cl:defpackage #:cl-json-pointer/trush
-  (:use :cl #:cl-json-pointer
-	#:alexandria)
-  (:export))
+;;; Codes deleted from `cl-json-pointer'.
 
-(in-package :cl-json-pointer/trush)
+(defpackage #:y2q-cl-trash/cljsp-unused
+  (:use :cl #:alexandria)
+  (:export
+   #:remove-nth
+   #:delete-nth
+   #:string-invert-case
+   #:intern-with-readtable-case
+   #:define-this-source-pathname-variable
+   #:aconsf
+   #:list*-f
+   #:error-thunk
+   #:add-to-tail*
+   #:setf-lambda))
+
+(in-package #:y2q-cl-trash/cljsp-unused)
 
 ;;; deleted from utils
 
@@ -59,11 +70,13 @@
      (eval-when (:execute)
        (defvar ,name))))
 
-(define-this-source-pathname-variable *this-file-path*)
-
-(defparameter *rfc6901-example-path*
-  (merge-pathnames "rfc6901-example.json"
-		   *this-file-path*))
+;; Example:
+;;
+;; (define-this-source-pathname-variable *this-file-path*)
+;;
+;; (defparameter *rfc6901-example-path*
+;;   (merge-pathnames "rfc6901-example.json"
+;; 		   *this-file-path*))
 
 
 ;;; deleted from traversal.lisp
