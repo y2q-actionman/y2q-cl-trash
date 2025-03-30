@@ -1,7 +1,6 @@
 (defpackage #:y2q-cl-trash/slots-boundp
   (:use :cl)
-  (:import-from #:y2q-cl-trash/package
-		#:slots-boundp))
+  (:export #:slots-boundp))
 
 (in-package #:y2q-cl-trash/slots-boundp)
 
